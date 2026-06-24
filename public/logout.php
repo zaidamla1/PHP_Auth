@@ -1,5 +1,9 @@
 <?php
-session_start();
+require_once "../includes/session.php";
+session_unset();
 session_destroy();
-echo "Session cleared! Now go to register.php";
+header(
+    "Location:login.php"
+)
 ?>
+exit;
